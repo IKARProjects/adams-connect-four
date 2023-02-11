@@ -1,0 +1,205 @@
+body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+#container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 560px;
+  width: 650px;
+  background-color: black;
+  border: 2px solid gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30%;
+}
+
+#player1Display {
+  position: relative;
+  right: 5%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 2px solid blue;
+  height: 80px;
+  width: 80px;
+  font-size: medium;
+  border-radius: 30%;
+}
+
+#player2Display {
+  position: relative;
+  right: 3%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid blue;
+  height: 80px;
+  width: 80px;
+  font-size: medium;
+  border-radius: 30%;
+}
+#board {
+  height: 400px;
+  width: 400px;
+  background-color: none;
+  border: 2px solid blue;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.cell {
+  height: 40px;
+  width: 40px;
+  border: 2px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30%;
+}
+
+#p1Scoreboard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 5%;
+  bottom: 10%;
+  height: 50px;
+  width: 60px;
+  /* background-color: blue; */
+  color: white;
+  font-size: large;
+}
+#p2Scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  /* background-color: aqua; */
+  position: relative;
+  left: 7%;
+  bottom: 10%;
+  width: 60px;
+  font-size: large;
+  color: white;
+}
+
+#player1 {
+  background-color: black;
+  color: blue;
+  position: absolute;
+  left: 5%;
+  top: 20%;
+}
+
+#player1Name {
+  border: none;
+  background-color: black;
+  color: blue;
+}
+#player2Name {
+  border: none;
+  background-color: black;
+  color: blue;
+}
+#player2 {
+  justify-content: center;
+  background-color: black;
+  color: blue;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+}
+
+/* player dataset */
+.piece {
+  border: 3px solid white;
+  height: 40px;
+  width: 40px;
+  border-radius: 30%;
+}
+.piece[data-player="GREEN"] {
+  background-color: green;
+  border: 2px yellowgreen solid;
+  height: 40px;
+  width: 40px;
+}
+.piece[data-player="MAROON"] {
+  border: 2px white solid;
+  background-color: maroon;
+  height: 40px;
+  width: 40px;
+}
+.piece[data-player="BLACK"] {
+  border: 2px yellowgreen solid;
+  background-color: black;
+  border: 2px solid yellow;
+  height: 40px;
+  width: 40px;
+}
+.piece[data-player="PINK"] {
+  border: 2px whitesmoke solid;
+  background-color: rgb(228, 129, 145);
+  height: 40px;
+  width: 40px;
+}
+
+.piece[data-player="RED"] {
+  border: 2px white solid;
+  background-color: red;
+  height: 40px;
+  width: 40px;
+}
+.piece[data-player="BLUE"] {
+  border: 2px white solid;
+  background-color: blue;
+  height: 40px;
+  width: 40px;
+}
+.piece[data-player="PURPLE"] {
+  background-color: purple;
+  height: 40px;
+  width: 40px;
+}
+.piece[data-player="YELLOW"] {
+  background-color: YELLOW;
+  height: 40px;
+  width: 40px;
+}
+
+.drawModal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 100px;
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  border: 5px solid yellow;
+  background-color: gray;
+  border-radius: 30%;
+}
+
+.winModal {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  border-radius: 30%;
+  height: 400px;
+  width: 400px;
+  border: 5px solid rgba(164, 166, 191, 0.756);
+  font-size: 80px;
+}

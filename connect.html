@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="connect.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>connect4</title>
+  </head>
+
+  <body>
+    <div id="player1">
+      <h1>PLAYER1</h1>
+      <input
+        type="text"
+        id="player1Name"
+        value=""
+        placeholder="PLAYER 1 Name"
+        style="text-transform: uppercase"
+      />
+      <input
+        type="text"
+        id="player1Color"
+        value=""
+        placeholder="PLAYER 1 COLOR"
+        style="text-transform: uppercase"
+      />
+      <button id="submit1" onclick="onclickSubmit1()">SUBMIT</button>
+    </div>
+
+    <div id="container">
+      <div id="p1Scoreboard">
+        score:
+        <div id="p1Score">0</div>
+      </div>
+
+      <div id="player1Display" style="text-transform: uppercase">PLAYER 1</div>
+
+      <div id="board"></div>
+
+      <div id="p2Scoreboard">
+        score:
+        <div id="p2Score">0</div>
+      </div>
+
+      <div id="player2Display" style="text-transform: uppercase">PLAYER 2</div>
+    </div>
+
+    <div id="player2">
+      <h1>PLAYER2</h1>
+      <input
+        type="text"
+        id="player2Name"
+        value=""
+        placeholder="PLAYER2"
+        style="text-transform: uppercase"
+      />
+      <button id="submit2" onclick="onclickSubmit2()">SUBMIT</button>
+    </div>
+  </body>
+  <script src="connect.js"></script>
+</html>
