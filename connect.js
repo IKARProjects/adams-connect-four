@@ -14,23 +14,21 @@ let player2Color = document.getElementById('player2Color')
 
 
 
-addEventListener("oclick", onclickSubmit1())
-addEventListener("oclick", onclickSubmit2())
+addEventListener("onclick", onclickSubmit1())
+addEventListener("onclick", onclickSubmit2())
 
 
 
 function onclickSubmit1() {
     PLAYER1 = 'RED'
-
     Name1 = player1Name.value
     player1Display.innerHTML = Name1
     console.log(Name1)
 
 }
-PLAYER2 = 'YELLOW'
 function onclickSubmit2() {
+    PLAYER2 = 'YELLOW'
     Name2 = player2Name.value
-
     player2Display.innerHTML = Name2
     console.log(Name2)
 
@@ -161,13 +159,13 @@ function winner() {
     if (playerTurn === PLAYER1) {
         winModal.style.color = 'black'
         winModal.style.backgroundColor = PLAYER1
-        winModal.innerText = player1Display.innerHTML + " " + "WINS"
+        winModal.innerText = player1Display.innerHTML + " " + "WINS!!"
 
 
     } else if (playerTurn === PLAYER2) {
         winModal.style.color = 'black'
         winModal.style.backgroundColor = PLAYER2
-        winModal.innerText = player2Display.innerHTML + " " + "WINS"
+        winModal.innerText = player2Display.innerHTML + " " + "WINS!!"
 
     }
     board.append(winModal)

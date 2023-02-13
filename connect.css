@@ -4,11 +4,14 @@ body {
   height: 100vh;
   overflow: hidden;
   display: flex;
+  justify-content: center;
 }
 
 #container {
   position: absolute;
   left: 50%;
+  top: 25%;
+  transform: translateY( -50%);
   transform: translateX(-50%);
   height: 560px;
   width: 650px;
@@ -197,6 +200,7 @@ body {
   display: flex;
   position: absolute;
   align-items: center;
+  text-align: center;
   border-radius: 30%;
   height: 400px;
   width: 400px;
