@@ -25,6 +25,10 @@ function onclickSubmit1() {
     player1Display.innerHTML = Name1
     console.log(Name1)
 
+    if (Name1) {
+        submit1.style.display = 'none'
+    }
+
 }
 function onclickSubmit2() {
     PLAYER2 = 'YELLOW'
@@ -32,7 +36,9 @@ function onclickSubmit2() {
     player2Display.innerHTML = Name2
     console.log(Name2)
 
-
+    if (Name2) {
+        submit2.style.display = 'none'
+    }
 
 }
 
@@ -155,7 +161,7 @@ function winner() {
 
     winModal = document.createElement('div')
     winModal.className = 'winModal'
-   winModal.style="text-transform: uppercase"
+    winModal.style = "text-transform: uppercase"
     if (playerTurn === PLAYER1) {
         winModal.style.color = 'black'
         winModal.style.backgroundColor = PLAYER1

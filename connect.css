@@ -101,7 +101,7 @@ body {
 }
 
 #player1 {
-  background-color: black;
+  background-color: transparent;
   color: blue;
   position: absolute;
   left: 5%;
@@ -110,17 +110,17 @@ body {
 
 #player1Name {
   border: none;
-  background-color: black;
+  background-color: transparent;
   color: blue;
 }
 #player2Name {
   border: none;
-  background-color: black;
+  background-color: transparent;
   color: blue;
 }
 #player2 {
   justify-content: center;
-  background-color: black;
+  background-color: transparent;
   color: blue;
   position: absolute;
   top: 20%;
