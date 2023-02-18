@@ -7,7 +7,15 @@ body {
   justify-content: center;
 }
 
+.title{
+  position: relative;
+  font-size: 80px;
+  font: italic ;
+  color: blue;
+}
+
 #container {
+ 
   position: absolute;
   left: 50%;
   top: 25%;
@@ -23,34 +31,7 @@ body {
   border-radius: 30%;
 }
 
-#player1Display {
-  position: relative;
-  right: 5%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  border: 2px solid blue;
-  height: 80px;
-  width: 80px;
-  font-size: medium;
-  border-radius: 30%;
-}
 
-#player2Display {
-  position: relative;
-  right: 3%;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid blue;
-  height: 80px;
-  width: 80px;
-  font-size: medium;
-  border-radius: 30%;
-}
 #board {
   height: 400px;
   width: 400px;
@@ -73,6 +54,41 @@ body {
   border-radius: 30%;
 }
 
+
+
+#player1 {
+  background-color: transparent;
+  color: blue;
+  position: absolute;
+  left: 5%;
+  top: 10%;
+  
+}
+
+#player1Display {
+  position: relative;
+  right: 5%;
+  color:blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid blue;
+  height: 80px;
+  width: 80px;
+  font-size: medium;
+  border-radius: 30%;
+}
+#player1Name {
+  border: none;
+  background-color: transparent;
+  color: blue;
+}
+
+#player1Color{
+  background-color: transparent;
+  border: none;
+  color: blue;
+}
 #p1Scoreboard {
   position: relative;
   display: flex;
@@ -86,6 +102,43 @@ body {
   color: white;
   font-size: large;
 }
+
+#player2 {
+  justify-content: center;
+  background-color: transparent;
+  color: blue;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+#player2Display {
+  position: relative;
+  right: 3%;
+  color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid blue;
+  height: 80px;
+  width: 80px;
+  font-size: medium;
+  border-radius: 30%;
+}
+
+#player2Name {
+  border: none;
+  background-color: transparent;
+  color: blue;
+}
+
+#player2Color{
+  background-color: transparent;
+  border: none;
+  color: blue;
+}
+
+
 #p2Scoreboard {
   display: flex;
   align-items: center;
@@ -98,33 +151,6 @@ body {
   width: 60px;
   font-size: large;
   color: white;
-}
-
-#player1 {
-  background-color: transparent;
-  color: blue;
-  position: absolute;
-  left: 5%;
-  top: 20%;
-}
-
-#player1Name {
-  border: none;
-  background-color: transparent;
-  color: blue;
-}
-#player2Name {
-  border: none;
-  background-color: transparent;
-  color: blue;
-}
-#player2 {
-  justify-content: center;
-  background-color: transparent;
-  color: blue;
-  position: absolute;
-  top: 20%;
-  right: 5%;
 }
 
 /* player dataset */
@@ -146,13 +172,7 @@ body {
   height: 40px;
   width: 40px;
 }
-.piece[data-player="BLACK"] {
-  border: 2px yellowgreen solid;
-  background-color: black;
-  border: 2px solid yellow;
-  height: 40px;
-  width: 40px;
-}
+
 .piece[data-player="PINK"] {
   border: 2px whitesmoke solid;
   background-color: rgb(228, 129, 145);
@@ -166,12 +186,7 @@ body {
   height: 40px;
   width: 40px;
 }
-.piece[data-player="BLUE"] {
-  border: 2px white solid;
-  background-color: blue;
-  height: 40px;
-  width: 40px;
-}
+
 .piece[data-player="PURPLE"] {
   background-color: purple;
   height: 40px;
@@ -206,4 +221,16 @@ body {
   width: 400px;
   border: 5px solid rgba(164, 166, 191, 0.756);
   font-size: 80px;
+}
+
+
+
+#reset{
+  height: 40px;
+  position: relative;
+  top: 90%;
+  right: 18%;
+  background-color: transparent;
+  color: blue;
+  border: none;
 }
