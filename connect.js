@@ -9,28 +9,28 @@ let player1Name = document.getElementById('player1Name')
 let player2Name = document.getElementById('player2Name')
 const submit1 = document.getElementById('submit1')
 let player1Color = document.getElementById('player1Color')
- color1=player1Color.value
+color1 = player1Color.value
 let player2Color = document.getElementById('player2Color')
- color2=player2Color.value
+color2 = player2Color.value
 const submit2 = document.getElementById('submit2')
-// const submitColor1 = document.getElementById('submitColor1')
-// const submitColor2 = document.getElementById('submitColor2')
 const reset = document.getElementById('reset')
+let currentPlayer = 1
 
-PLAYER1 = color1
+PLAYER1 = "RED"
 PLAYER2 = color2
 playerTurn = PLAYER1
 
-function changeColor1(selectedObject){
+function changeColor1(selectedObject) {
 
-    playerTurn=selectedObject.value
+    debugger;
+    color1 = selectedObject.value
     console.log(selectedObject.value)
 
 
 }
 
-function changeColor2(selectedobject){
-    playerTurn=selectedObject.value
+function changeColor2(selectedObject) {
+    color2 = selectedObject.value
     console.log(selectedObject.value)
 }
 
@@ -59,23 +59,18 @@ function onclickSubmit2() {
 }
 
 
-// addEventListener("onclick", onclickSubmitColor1())
-// function onclickSubmitColor1() {
+
+// function changeColor1() {
 
 //     let color1 = player1Color.value
-//     if (color1) {
-//         submitColor1.style.display = 'none'
-//     }
+
 //     console.log(color1)
 
 // }
 
-// addEventListener("onclick", onclickSubmitColor2())
-// function onclickSubmitColor2() {
+// function changeColor2() {
 //     let color2 = player1Color.value
-//     if (color2) {
-//         submitColor2.style.display = 'none'
-//     }
+
 //     console.log(color2)
 
 // }
@@ -94,6 +89,12 @@ for (let i = 0; i < 42; i++) {
 
 
 function onclickColumn(column) {
+    if (currentPlayer === 1) {
+        playerTurn = color1
+    } else {
+        playerTurn === color2
+    }
+
     let availableSpace = pieces.filter((_, index) => index % 7 === column).lastIndexOf(0)
     pieces[(availableSpace * 7) + column] = playerTurn
     let cell = board.children[(availableSpace * 7) + column]
@@ -109,16 +110,18 @@ function onclickColumn(column) {
 
 
     checkForWinner()
-    if (playerTurn === PLAYER1) {
-        playerTurn = PLAYER2
+    if (currentPlayer === 1) {
+        currentPlayer = 2
+        playerTurn = color2
         document.body.style.backgroundColor = playerTurn
         player2Display.style.backgroundColor = playerTurn
         player1Display.style.backgroundColor = null
         console.log(PLAYER2)
     }
     else if
-        (playerTurn === PLAYER2) {
-        playerTurn = PLAYER1
+        (currentPlayer === 2) {
+        currentPlayer = 1
+        playerTurn = color1
         document.body.style.backgroundColor = playerTurn
         player1Display.style.backgroundColor = playerTurn
         player2Display.style.backgroundColor = null
@@ -190,13 +193,13 @@ function winner() {
     winModal = document.createElement('div')
     winModal.className = 'winModal'
     winModal.style = "text-transform: uppercase"
-    if (playerTurn === PLAYER1) {
+    if (currentPlayer === 1) {
         winModal.style.color = 'black'
-        winModal.style.backgroundColor = PLAYER1
+        winModal.style.backgroundColor = color1
         winModal.innerText = player1Display.innerHTML + " " + "WINS!!"
-    } else if (playerTurn === PLAYER2) {
+    } else if (currentPlayer === 2) {
         winModal.style.color = 'black'
-        winModal.style.backgroundColor = PLAYER2
+        winModal.style.backgroundColor = color2
         winModal.innerText = player2Display.innerHTML + " " + "WINS!!"
     }
     board.append(winModal)

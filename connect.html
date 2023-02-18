@@ -29,13 +29,13 @@
         style="text-transform: uppercase"
       /> -->
       
-      <select name="color1" id="player1Color">
-        <option value="PINK">PINK</option>
+      <select name="color1" id="player1Color" onchange="changeColor1(this)">
+        <option  value="PINK">PINK</option>
         <option value="GREEN">GREEN</option>
-        
+      
         <option value="MAROON">MAROON</option>
         <option  value="YELLOW">YELLOW</option>
-        <option selected value="PURPLE">PURPLE</option>
+        <option  value="PURPLE">PURPLE</option>
         <option value="RED">RED</option>
       </select>
       <!-- <button id="submitColor1" onclick="onclickSubmitColor1(player1Color)">SUBMIT</button> -->
@@ -82,7 +82,7 @@
       /> -->
 
 
-      <select name="color2" id="player2Color">
+      <select name="color2" id="player2Color" onchange="changeColor2(this)">
         <option value="RED">RED</option>
         <option value="GREEN">GREEN</option>
         <option value="PINK">PINK</option>
