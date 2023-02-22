@@ -13,19 +13,17 @@ color1 = player1Color.value
 let player2Color = document.getElementById('player2Color')
 color2 = player2Color.value
 const submit2 = document.getElementById('submit2')
-const reset = document.getElementById('reset')
+let reset = document.getElementById('reset')
 let currentPlayer = 1
 
-PLAYER1 = "RED"
+PLAYER1 = color1
 PLAYER2 = color2
 playerTurn = PLAYER1
 
 function changeColor1(selectedObject) {
 
-    debugger;
     color1 = selectedObject.value
     console.log(selectedObject.value)
-
 
 }
 
@@ -34,7 +32,6 @@ function changeColor2(selectedObject) {
     console.log(selectedObject.value)
 }
 
-//addEventListener("onclick", onclickSubmit1())
 function onclickSubmit1() {
 
     Name1 = player1Name.value
@@ -46,7 +43,6 @@ function onclickSubmit1() {
     console.log(Name1)
 }
 
-// addEventListener("onclick", onclickSubmit2())
 function onclickSubmit2() {
 
     Name2 = player2Name.value
@@ -60,20 +56,6 @@ function onclickSubmit2() {
 
 
 
-// function changeColor1() {
-
-//     let color1 = player1Color.value
-
-//     console.log(color1)
-
-// }
-
-// function changeColor2() {
-//     let color2 = player1Color.value
-
-//     console.log(color2)
-
-// }
 
 for (let i = 0; i < 42; i++) {
     let cell = document.createElement("div");
@@ -106,7 +88,6 @@ function onclickColumn(column) {
     piece.className = 'piece'
     piece.dataset.player = playerTurn
     cell.append(piece)
-    console.log(pieces)
 
 
     checkForWinner()
@@ -117,6 +98,7 @@ function onclickColumn(column) {
         player2Display.style.backgroundColor = playerTurn
         player1Display.style.backgroundColor = null
         console.log(PLAYER2)
+        document.getElementById('player1Color').disabled = true
     }
     else if
         (currentPlayer === 2) {
@@ -126,6 +108,7 @@ function onclickColumn(column) {
         player1Display.style.backgroundColor = playerTurn
         player2Display.style.backgroundColor = null
         console.log(PLAYER1)
+        document.getElementById('player2Color').disabled = true
 
     }
 
@@ -209,38 +192,32 @@ function winner() {
 
 }
 
-addEventListener("onclick", onclickReset())
 function onclickWinModal() {
-    onclickReset()
+  
     winModal.remove()
 
     if (playerTurn === PLAYER1) {
         let player2Score = p2Score.innerText
-        let result = Number(player2Score)
+         result = Number(player2Score)
         p2Score.innerText = result + 1
-        result++
+        // result++
 
     }
 
     if (playerTurn === PLAYER2) {
         let player1Score = p1Score.innerText
-        let result = Number(player1Score)
+         result = Number(player1Score)
         p1Score.innerText = result + 1
-        result++
+        // result++
 
     }
+    console.log(result)
 
-    if (result === Number(player1Score)) {
-        playerTurn = PLAYER1
-    }
 
-    else if (result === Number(player2Score)) {
-        playerTurn = PLAYER2
-    }
+    onclickReset()
 }
 
 
-addEventListener("onclick", onclickReset())
 function onclickReset() {
     pieces = pieces.map((m, i) => {
         m = 0
@@ -251,7 +228,8 @@ function onclickReset() {
         return m
     }
     )
-
+    document.getElementById('player1Color').disabled = false
+    document.getElementById('player2Color').disabled = false
     document.body.style.backgroundColor = 'black'
 
 }
@@ -268,7 +246,7 @@ function draw() {
 
 
 function onclickDrawModal() {
-    location.reload()
+    onclickReset()
 }
 
 
