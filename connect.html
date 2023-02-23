@@ -17,6 +17,7 @@
         value=""
         placeholder="PLAYER 1 Name"
         style="text-transform: uppercase"
+        style="background-color: blueviolet;"
       />
       <button id="submit1" onclick="onclickSubmit1()">SUBMIT</button>
       <select name="color1" id="player1Color" onchange="changeColor1(this)">
@@ -28,7 +29,7 @@
         <option value="RED">RED</option>
       </select>
     </div>
-    <button type="button" id="reset" onclick="onclickReset()">Reset Board</button>
+  
     <h1 class="title">CONNECT FOUR</h1>
 
     <div id="container">
@@ -71,6 +72,7 @@
         <option value="PURPLE">PURPLE</option>
       </select>
     </div>
+    <button type="button" id="reset" onclick="resetBoard()">Reset Board</button>
   </body>
   <script src="connect.js"></script>
 </html>

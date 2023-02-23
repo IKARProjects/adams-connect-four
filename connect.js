@@ -13,7 +13,7 @@ color1 = player1Color.value
 let player2Color = document.getElementById('player2Color')
 color2 = player2Color.value
 const submit2 = document.getElementById('submit2')
-let reset = document.getElementById('reset')
+ reset = document.getElementById('reset')
 let currentPlayer = 1
 
 PLAYER1 = color1
@@ -200,7 +200,6 @@ function onclickWinModal() {
         let player2Score = p2Score.innerText
          result = Number(player2Score)
         p2Score.innerText = result + 1
-        // result++
 
     }
 
@@ -208,17 +207,16 @@ function onclickWinModal() {
         let player1Score = p1Score.innerText
          result = Number(player1Score)
         p1Score.innerText = result + 1
-        // result++
 
     }
-    console.log(result)
 
 
-    onclickReset()
+    resetBoard()
 }
 
 
-function onclickReset() {
+function resetBoard() {
+    
     pieces = pieces.map((m, i) => {
         m = 0
         let removeableChild = document.getElementById(i).firstChild
@@ -246,7 +244,7 @@ function draw() {
 
 
 function onclickDrawModal() {
-    onclickReset()
+    resetBoard()
 }
 
 

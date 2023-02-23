@@ -9,7 +9,7 @@ body {
 
 .title {
   position: relative;
-  right: 50px;
+  left: 30px;
   top: 90px;
   font: italic;
   color: blue;
@@ -224,10 +224,10 @@ body {
 
 #reset {
   position: relative;
-  left: 10%;
-  top: 90%;
+  right: 10%;
+  top:70%;
   height: 40px;
   background-color: transparent;
   color: blue;
-  border: none;
+  border: 2px gray solid;
 }
